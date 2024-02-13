@@ -2,10 +2,10 @@ import { View, Text, Switch, FlatList, StatusBar, Image, TextInput, TouchableOpa
 import { SafeAreaView } from 'react-native-safe-area-context';
 import React, {useEffect, useState} from 'react';
 import { useColorScheme, NativeWindStyleSheet } from 'nativewind';
-import StatusBarComponent from '../components/tools/StatusBarComponent';
-import SwitchComponent from '../components/tools/SwitchComponent';
-import { Avatar, Gucci, HM, Nike, Sitting, Trucker, Zara } from '../assets';
-import { COLORS } from '../assets/constants';
+// import StatusBarComponent from '../components/tools/StatusBarComponent';
+// import SwitchComponent from '../components/tools/SwitchComponent';
+import { Avatar,  Nike, } from '../assets';
+// import { COLORS } from '../assets/constants';
 import { FontAwesome, AntDesign,  MaterialCommunityIcons } from '@expo/vector-icons';
 
 
@@ -29,10 +29,10 @@ const Home = () => {
   ];
 
   const BrandsData = [
-  { id: '1', title: 'Zara', source: Zara },
-  { id: '2', title: 'Gucci', source: Gucci },
-  { id: '3', title: 'H&M', source: HM },
-  { id: '4', title: 'Nike', source: Nike },
+  { id: '1', title: 'Zara',  },
+  { id: '2', title: 'Gucci',  },
+  { id: '3', title: 'H&M',  },
+  { id: '4', title: 'Nike', },
 ]
 
    
@@ -63,7 +63,7 @@ renderBrandItem = ({item}) => {
   return (
     <SafeAreaView className="flex-1 relative bg-#ffffff dark:bg-[#0f1414]">
       <ScrollView>
-      <StatusBarComponent />
+      {/* <StatusBarComponent /> */}
       {/* HEADER SECTION */}
       <View className="flex-row  px-4 mt-8 items-center space-x-2 justify-between">
 
@@ -116,9 +116,9 @@ renderBrandItem = ({item}) => {
 <View className="mt-4 px-4">
           <Text className="font-bold text-[30px] dark:text-white">Top Brands</Text>
           <View className="flex-row items-center justify-between ">
-            <View className="h-[60] w-[60] mt-4 rounded-full  items-center justify-center border-solid border-violet-700 border-2 "><Image className="w-full h-full object-cover  " source={Zara} /></View>
-            <View className="h-[60] w-[60] mt-4 rounded-full  items-center justify-center border-solid border-violet-700 border-2"><Image className="w-full h-[15]  object-scale-down  " source={Gucci} /></View>
-            <View className="h-[60] w-[60] mt-4 rounded-full  items-center justify-center border-solid border-violet-700 border-2 "><Image className="w-full h-[15] object-cover  " source={HM} /></View>
+            <View className="h-[60] w-[60] mt-4 rounded-full  items-center justify-center border-solid border-violet-700 border-2 "><Image className="w-full h-full object-cover  " source={Nike} /></View>
+            <View className="h-[60] w-[60] mt-4 rounded-full  items-center justify-center border-solid border-violet-700 border-2"><Image className="w-full h-[15]  object-scale-down  " source={Nike} /></View>
+            <View className="h-[60] w-[60] mt-4 rounded-full  items-center justify-center border-solid border-violet-700 border-2 "><Image className="w-full h-[15] object-cover  " source={Nike} /></View>
             <View className="h-[60] w-[60] mt-4 rounded-full  items-center justify-center border-solid border-violet-700 border-2 "><Image className="w-full h-[15] object-cover  " source={Nike} /></View>
           </View>
         </View>
@@ -134,7 +134,7 @@ renderBrandItem = ({item}) => {
 
        <View className="flex-row px-4">
         <View className="w-40 h-60 bg-red-600 py-8 items-center  justify-center"><View className="w-full px-4 flex-col">
-          <Image className="w-full h-20 px-2" source={Sitting} />
+          <Image className="w-full h-20 px-2" source={Avatar} />
         </View>
         <View>
           
@@ -146,7 +146,7 @@ renderBrandItem = ({item}) => {
         
         </View>
         <View className="w-40 h-60 bg-blue-600 py-8 ml-2 items-center justify-center "><View className="w-full px-4 flex-col">
-          <Image className="w-full h-20" source={Sitting} />
+          <Image className="w-full h-20" source={Avatar} />
         </View>
         <View>
           
@@ -165,7 +165,7 @@ renderBrandItem = ({item}) => {
 
 
 
-      <SwitchComponent />
+      {/* <SwitchComponent /> */}
       </ScrollView>
     </SafeAreaView>
   );
